@@ -21,7 +21,11 @@ The AI assistant can help users analyze their habit history, provide motivation,
 *   **Privacy Focused:** All your habit data and AI interactions remain on your local machine.
 
 ---
+## 📸 Demo Screenshot
 
+![Habit Tracker with AI Coach Demo](img/demo.png)
+
+---
 ## 🛠️ Tech Stack
 
 *   **Frontend:**
