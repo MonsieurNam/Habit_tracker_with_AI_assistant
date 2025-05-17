@@ -5,6 +5,7 @@ import { Container, Typography } from '@mui/material';
 import AddHabitForm from './components/add-habit-form';
 import HabitList from './components/habit-list';
 import HabitStats from './components/habit-stats';
+import ChatbotUI from './components/ChatbotUI';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <AddHabitForm/>
         <HabitList/>
         <HabitStats/>
+        <ChatbotUI />
       </Container>
     </Provider>
   )

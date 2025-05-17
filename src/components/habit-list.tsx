@@ -5,26 +5,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { removeHabit, toggleHabit, type Habit } from '../store/habit-slice';
+import { getStreak } from '../utils/habitUtils';
 
 const HabitList: React.FC = () => {
     const { habits = [] } = useSelector((state: RootState) => state.habits);
     const dispatch = useDispatch<AppDispatch>();
     const today = new Date().toISOString().split("T")[0];
 
-    const getStreak = (habit: Habit) => {
-        let streak = 0;
-        const currentDate = new Date();
-        while (true) {
-            const dateString = currentDate.toISOString().split("T")[0];
-            if (habit.completeDates.includes(dateString)) {
-                streak++;
-                currentDate.setDate(currentDate.getDate() - 1);
-            } else {
-                break;
-            }
-        }
-        return streak;
-    }
+    // const getStreak = (habit: Habit) => {
+    //     let streak = 0;
+    //     const currentDate = new Date();
+    //     while (true) {
+    //         const dateString = currentDate.toISOString().split("T")[0];
+    //         if (habit.completeDates.includes(dateString)) {
+    //             streak++;
+    //             currentDate.setDate(currentDate.getDate() - 1);
+    //         } else {
+    //             break;
+    //         }
+    //     }
+    //     return streak;
+    // }
 
     return (
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 4 }}>
